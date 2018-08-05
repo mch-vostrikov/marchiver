@@ -26,3 +26,6 @@ if (DOXYGEN_FOUND)
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
         VERBATIM )
 endif (DOXYGEN_FOUND)
+
+enable_testing()
+add_subdirectory(test)
