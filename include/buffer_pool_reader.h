@@ -11,6 +11,9 @@ namespace marchiver {
 /**
     Reads data from provided \c std::istream, maintaining pool of reusable buffers.
     Relies on shared_from_this to track it's own lifetime.
+    It's worth to mention that it would probably be more correct to rely on allocator
+    instead of manually reusing buffers. But I'm interested in trying to implement
+    such behaviour, and that's what this project is mainly about.
 */
 class BufferPoolReader: public DataReader, public std::enable_shared_from_this<BufferPoolReader>
 {
